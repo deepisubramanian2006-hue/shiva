@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #2c2c54;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #6a11cb;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+/* Parking UI */
+
+.parking-container {
+  position: relative;
+  height: 90vh;
+  background: linear-gradient(to bottom, #3c3c8c, #2c2c54);
+  color: white;
+}
+
+.exit-board {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: green;
+  padding: 10px;
+}
+
+.entry {
+  position: absolute;
+  right: 40px;
+  top: 100px;
+  background: #00c853;
+  padding: 10px;
+}
+
+.parking-area {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pillar {
+  width: 60px;
+  height: 120px;
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(6, 60px);
+  gap: 10px;
+}
+
+.slot {
+  width: 60px;
+  height: 100px;
+  border: 2px dashed white;
+}
+
+.occupied {
+  background: red;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
