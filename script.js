@@ -1,28 +1,11 @@
-// LOGIN
-function login() {
-  let u = document.getElementById("username").value;
-  let p = document.getElementById("password").value;
-
-  if (u === "rit" && p === "123") {
-    window.location.href = "vehicle.html";
-  } else {
-    alert("Wrong login");
-  }
-}
-
-// VEHICLE
-function selectVehicle(type) {
-  localStorage.setItem("vehicle", type);
-  window.location.href = "parking.html";
-}
-
-// PARKING LOGIC
 let total = 12;
 let occupied = 0;
 
 function loadSlots() {
   let container = document.getElementById("slots");
   if (!container) return;
+
+  container.innerHTML = ""; // clear old
 
   for (let i = 0; i < total; i++) {
     let div = document.createElement("div");
@@ -33,8 +16,10 @@ function loadSlots() {
         div.classList.remove("occupied");
         occupied--;
       } else {
-        div.classList.add("occupied");
-        occupied++;
+        if (occupied < total) {
+          div.classList.add("occupied");
+          occupied++;
+        }
       }
       updateDashboard();
     };
