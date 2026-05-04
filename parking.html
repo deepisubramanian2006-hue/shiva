@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Select Vehicle</title>
+  <title>Parking</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="center">
+<body>
 
-<div class="card">
-  <h2>Select Vehicle</h2>
-  <button onclick="selectVehicle('two')">🛵 Two Wheeler</button>
-  <button onclick="selectVehicle('four')">🚗 Four Wheeler</button>
+<div class="top-bar">
+  <div>Available: <span id="available">0</span></div>
+  <div>Occupied: <span id="occupied">0</span></div>
+</div>
+
+<div class="parking-container">
+
+  <!-- EXIT -->
+  <div class="exit-board">EXIT ↑</div>
+
+  <!-- ENTRY -->
+  <div class="entry">ENTRY</div>
+
+  <!-- PARKING AREA -->
+  <div class="parking-area">
+
+    <!-- PILLARS -->
+    <div class="pillar">N1</div>
+    <div class="pillar">N2</div>
+    <div class="pillar">N3</div>
+    <div class="pillar">N4</div>
+    <div class="pillar">N5</div>
+
+    <!-- SLOTS -->
+    <div class="slots" id="slots"></div>
+
+  </div>
+
+  <!-- ROAD ARROW -->
+  <div class="road-arrow">➡ ➡ ➡</div>
+
 </div>
 
 <script src="script.js"></script>
