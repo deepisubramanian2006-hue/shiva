@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  color: white;
+  padding: 10px 40px;
+}
+
+.parking-container {
+  position: relative;
+  height: 90vh;
+  background: linear-gradient(to bottom, #3c3c8c, #2c2c54);
+}
+
+/* EXIT LEFT */
+.exit-board {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: #00e676;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* ENTRY RIGHT */
+.entry {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: #00c853;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* AREA */
+.parking-area {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* PILLARS */
+.pillar {
+  width: 60px;
+  height: 140px;
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* SLOTS GRID */
+.slots {
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  gap: 15px;
+}
+
+/* SLOT */
+.slot {
+  width: 70px;
+  height: 100px;
+  border: 2px dashed white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* OCCUPIED */
+.occupied {
+  border: 2px solid red;
+}
